@@ -94,7 +94,7 @@ ol {
 /* CONTAINER */
 
 .container {
-   max-width: 1144px;
+   width: 1144px;
    margin-right: auto;
    margin-left: auto;
    padding-right: 20px;
@@ -305,10 +305,6 @@ ol {
 /* FEATURES START */
 .features {
    padding-top: 74px;
-   padding-bottom: 74px;
-   background-image: url("../images/features-bg.svg");
-   background-repeat: no-repeat;
-   background-position: calc(50% - 560px) calc(50% + 175px);
 }
 
 .features__inner {
@@ -359,6 +355,10 @@ ol {
    
 }
 
+.features__item--active > .features__link {
+   border-bottom: 4px solid var(--danger);
+}
+
 .features__item:nth-child(2) {
    margin-right: 50px;
    margin-left: 50px;
@@ -373,39 +373,65 @@ ol {
    padding-right: 42px;
    padding-bottom: 27px;
    padding-left: 42px;
+   border-bottom: 4px solid transparent;
 }
 
 .features__link--active {
    color: var(--darkblue);
    width: 100%;
-   border-bottom: 4px solid var(--danger);
+   border-bottom-color: var(--danger);
 }
 
 .features__link:hover {
    color: var(--danger);
 }
 
-.features__info-text-wrapper {
-   width: 445px;
-   padding-top: 57px;
-   padding-bottom: 146px;
-   margin-right: -535px;
+.features-info {
+   width: 100%;
+   background-repeat: no-repeat;
+   background-position: calc(50% - 525px);
+   display: flex;
+   justify-content: flex-end;
+   display: none;
 }
 
-.features__info-heading {
+.features-info--active {
+   display: block;
+}
+
+.features-info--bookmarking {
+   background-image: url("../images/features-bg.svg");
+}
+
+.features-info--searching {
+   background-image: url("../images/features-search.png");
+}
+
+.features-info--share {
+   background-image: url("../images/features-share.png");
+}
+
+.features-info__text-wrapper {
+   width: 445px;
+   margin-left: auto;
+   padding-top: 57px;
+   padding-bottom: 146px;
+}
+
+.features-info__heading {
    font-size: 32px;
    line-height: 52px;
    letter-spacing: -0.1px;
    margin-bottom: 16px;
 }
 
-.features__info-text {
+.features-info__text {
    font-size: 18px;
    line-height: 28px;
    margin-bottom: 32px;
 }
 
-.features__info-link {
+.features-info__link {
    font-weight: 500;
    font-size: 14px;
    line-height: 28px;
