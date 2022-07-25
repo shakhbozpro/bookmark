@@ -645,7 +645,7 @@ ol {
    margin-bottom: 19px;
 }
 
-.details-wrapper__det[open] .details__summerry {
+.details-wrapper__det[open] .details-wrapper__summerry {
    background-image: url("../images/droptop.svg");
    color: var(--darkblue);
 }
